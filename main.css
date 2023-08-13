@@ -1,0 +1,317 @@
+
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: nintendo-font;
+    src: url('font/nintendo.otf');
+}
+
+/* VARIABLES */
+:root {
+    /* LENGTH */
+    --MAX-WIDTH: 1280px;
+    --MIN-WIDTH: 1000px;
+
+    /* FONTS */
+    --FF: 'Rubik';
+    --FS: 1rem;
+    --FS-S: .8rem;
+    --FS-XS: .5rem;
+    --FS-M: 1.5rem;
+    --FS-L: 2rem;
+    --FS-XL: 3rem;
+    --FS-ARROWS: 4rem;
+
+    /* COLORS */
+    --HEADER-COLOR: rgba(197, 24, 30, 0.9);
+    --FOOTER-COLOR: #101010;
+    --BG-COLOR: #505050;
+    --TRANSPARENT-COLOR: rgba(16, 16, 16, 0.95);
+}
+
+/* UNIVERSAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* BODY PROPERTIES */
+html body {
+    height: 100%;
+    color: white;
+    font-family: var(--FF);
+    background-color: var(--BG-COLOR);
+    background-image:  linear-gradient(#50505000, #50505000, var(--BG-COLOR)), url('img/bg/bg_1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-position-y: 400px; */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER CONTENT */
+.header-container {
+    min-width: var(--MIN-WIDTH);
+    max-width: var(--MAX-WIDTH);
+    font-size: var(--FS-M);
+    width: 100%;
+    height: 100%;
+    /* background-image: url('./img/bg_header.jpg');
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.header-logo img {
+    display: block;
+    width: 100%;
+    max-width: var(--MIN-WIDTH);
+    height: auto;
+}
+
+.header .menu {
+    background-color: var(--HEADER-COLOR);
+    height: 4rem;
+    width: var(--MIN-WIDTH);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .menu-list {
+    font-family: nintendo-font;
+    font-size: var(--FS);
+    font-weight: 600;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.header .menu-list__items {
+    color: white;
+    transition: all 200ms ease-in-out;
+}
+
+/* .header-logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 64px;
+    width: auto;
+} */
+
+/* MAIN CONTENT */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-background {
+    min-width: var(--MIN-WIDTH);
+    max-width: var(--MAX-WIDTH);
+    width: 1000px;
+    background-color: rgba(16, 16, 16, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    font-size: var(--FS-XL);
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.info-container {
+    line-height: 2.5rem;
+}
+
+.main-subtitle {
+    font-family: nintendo-font;
+    font-size: var(--FS-L);
+    border: 4px solid white;
+    border-radius: 3rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.info-container {
+    width: 90%;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+.main .productos-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .img-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* IMAGE ANIMATION */
+.img-container img{
+    display: block;
+    max-width: 70%;
+    max-height: 540px;
+    width: auto;
+    aspect-ratio: initial;
+    border-radius: 1rem;
+    transition: transform 300ms ease-in-out, opacity 200ms ease-in-out;
+}
+
+
+.arrows {
+    display: block;
+    color: white;
+    font-size: var(--FS-ARROWS);
+    transition: all 200ms ease-in-out;
+}
+
+/* .arrows:hover, .volver-container:hover {
+    transform: scale(105%, 105%);
+    cursor: pointer;
+}
+.arrows:active, .volver-container:active {
+    transform: scale(102%, 102%);
+    text-shadow: 2px 2px 2px black;
+} */
+.main .lanyard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+
+}
+
+
+.main .producto-items{
+    min-width: var(--MIN-WIDTH);
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+/* FOOTER */
+
+.footer {
+    /* min-width: var(--MAX-WIDTH); */
+    background-color: var(--FOOTER-COLOR);
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    width: var(--MIN-WIDTH);
+    max-width: var(--MAX-WIDTH);
+    min-width: var(--MIN-WIDTH);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.volver-container {
+    width: 30%;
+    max-width: 360px;
+    min-width:  360px;
+    padding: 1rem;
+    transition: all 200ms ease-in-out;
+    /* cursor: pointer; */
+}
+
+.footer .volver {
+    font-family: nintendo-font;
+    font-size: var(--FS-M);
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.footer-menu {
+    list-style-type: none;
+}
+
+.footer-menu-container {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer-menu-container p {
+    font-weight: bold;
+}
+
+.footer-menu li {
+    line-height: 1.5rem;
+}
+
+.footer-menu span {
+    font-style: italic;
+    font-weight: 200;
+}
+
+
+
+.poleron-section, .lanyard-section, .productos-title, .lanyard-title, .poleron-title{
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+}
